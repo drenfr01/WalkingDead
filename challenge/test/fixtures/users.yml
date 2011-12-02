@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  password: MyString
+  lat: 9.99
+  lng: 9.99
+
+two:
+  username: MyString
+  password: MyString
+  lat: 9.99
+  lng: 9.99
