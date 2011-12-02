@@ -3,8 +3,8 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :username
       t.string :password
-      t.decimal :lat
-      t.decimal :lng
+      t.decimal :lat, :precision => 10, :scale => 6
+      t.decimal :lng, :precision => 10, :scale => 6
 
       t.timestamps
     end
