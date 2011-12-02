@@ -1,4 +1,5 @@
 Challenge::Application.routes.draw do
+  match '/' => 'users#index'
   resources :users
 
   # The priority is based upon order of creation:
