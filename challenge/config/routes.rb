@@ -1,6 +1,12 @@
 Challenge::Application.routes.draw do
-  match '/' => 'users#index'
+  
+  get "mobile/login"
+
+  #match '/' => 'users#index'
   resources :users
+  
+  root :to => 'mobile#index'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

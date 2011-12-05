@@ -1,0 +1,20 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* here live the definitions for the header */
+
+#maincontainer{/*border:1px solid black;*/ margin:0 auto; position:absolute; left:0px; top:0px; width:100%;}
+
+#header{/*border:1px solid black;*/ width:100%; position:relative; background-color:#536275;}
+
+#main{/*border:1px solid green;*/ width:100%; position:relative; background-color:#908E8F; padding-top:30px;}
+
+#squaresholder{border:1px solid black;	 margin-left:auto; margin-right:auto; overflow:auto; width:1260px;}
+
+.splashsquare{width:400px; height:400px; background-color:gray; font-family:optima; margin:10px; float:left; font-family:HelveticaNeue-Light; letter-spacing:0.0px;}
+
+.headlineholder{/*border:1px solid red;*/ text-align: center; margin-left:auto; margin-right:auto; font-family:Helvetica; font-size:24px; letter-spacing:1px; font-weight:lighter; padding:10px 0px; color:#E8E4C7}
+
+.subdescholder{/*border:1px solid green;*/ text-align: center; margin-left:auto; margin-right:auto;}
+
+.login{/*border:1px solid yellow*/; text-align:center; width:320px; height:70px; background:url('fblogin.png'); margin-left:auto; margin-right:auto; margin-top:30px; margin-bottom:30px;}
