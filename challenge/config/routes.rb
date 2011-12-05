@@ -3,7 +3,10 @@ Challenge::Application.routes.draw do
   get "mobile/login"
 
   #match '/' => 'users#index'
+  resource :account, :controller => "users"
   resources :users
+  resource :user_session
+  root :controller => "user_sessions", :action => "new"
   
   root :to => 'mobile#index'
   
