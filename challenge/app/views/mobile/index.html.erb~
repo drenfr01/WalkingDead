@@ -1,22 +1,25 @@
 <div id = "maincontainer">
 
-	<%= render 'shared/header'%>
+	<div id = "header">
+	
+		<div class = "headlineholder">Walking Dead</div>
+	
+	</div>
 
 	<div id = "main">
 
+	
+	
 	<div class = "subdescholder">Exercise, have fun, and track your progress.</div>
 	<% if user_signed_in?%>
- Signed in as <%= current_user.email %>.  Not you?
+ Signed in as  Not you?
  <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
 <% else %>
         <%= link_to "Sign up", new_user_registration_path%> or <%= link_to "sign in",
         new_user_session_path %>
 <% end %>
 	
-<<<<<<< HEAD
-=======
-		<a href = "/auth/facebook"><div class = "login"></div></a>	
->>>>>>> 3904777402708aae57c27ab3724c1c5c6e1d7a27
+		<div class = "login"></div>	
 		
 	</div>
 
