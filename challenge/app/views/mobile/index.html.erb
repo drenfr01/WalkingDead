@@ -4,13 +4,16 @@
 
 	<div id = "main">
 
-	<div class = "subdescholder">Exercise, have fun, and track your progress.</div>
+	
 	<% if user_signed_in?%>
- Signed in as <%= current_user.email %>.  Not you?
- <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
-<% else %>
-<% end %>
-		<a href = "/auth/facebook"><div class = "login"></div></a>	
+    <div class = "headlineholder">Signed in as <%= current_user.email %>.  Not you? <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
+	<p>Your location has been successfully stored to the rails console!</p>
+	</div>
+     <% else %>
+<div class = "subdescholder">Exercise, have fun, and track your progress.</div>
+<a href = "/auth/facebook"><div class = "login"></div></a>	
+     <% end %>
+		
 		
 	</div>
 
