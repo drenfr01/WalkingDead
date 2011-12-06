@@ -1,5 +1,5 @@
 class MobileController < ApplicationController
-  
+poop  
   def index
   
   	@title = 'Login'
@@ -7,10 +7,6 @@ class MobileController < ApplicationController
   end
   
   def login
-  end
-  
-  def loglocation
-    @title = "User Location"
   end
 
 end

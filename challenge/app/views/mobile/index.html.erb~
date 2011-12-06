@@ -1,9 +1,15 @@
 <div id = "maincontainer">
 
-	<%= render 'shared/header'%>
+	<div id = "header">
+	
+		<div class = "headlineholder">Walking Dead</div>
+	
+	</div>
 
 	<div id = "main">
 
+	
+	
 	<div class = "subdescholder">Exercise, have fun, and track your progress.</div>
 	<% if user_signed_in?%>
  Signed in as  Not you?
@@ -13,7 +19,7 @@
         new_user_session_path %>
 <% end %>
 	
-		<a href = "/auth/facebook"><div class = "login"></div></a>	
+		<div class = "login"></div>	
 		
 	</div>
 
