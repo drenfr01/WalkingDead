@@ -1,11 +1,14 @@
 Challenge::Application.routes.draw do
   
+  resources :authentications
+  match '/auth/:provider/callback' => 'authentications#create'
+  devise_for :users
+
   get "mobile/login"
 
   #match '/' => 'users#index'
   resource :account, :controller => "users"
   resources :users
-  resource :user_session
   # root :controller => "user_sessions", :action => "new"
   
   root :to => 'mobile#index'
