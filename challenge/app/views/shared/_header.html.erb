@@ -1,13 +1,13 @@
 <div id = "header">
+	<div class = "headlineholder">Walking Dead</div><hr />
 <% if user_signed_in?%>
-    <div class = "headlineholder">Signed in as <%= current_user.email %>.  Not you? <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %>
-	Would you like to go to your? <%= link_to "Home Page", '/mobile/loglocation/' %>
+    <div class = "subdescholder">Signed in as <%= current_user.email %>.  Not you? <%= link_to "Sign out", destroy_user_session_path, :method => :delete  %><br />
+	Would you like to go to your <%= link_to "Home Page", '/mobile/loglocation/' %>?
 	</div>
      <% else %>
 <div class = "subdescholder">Exercise, have fun, and track your progress.</div>
 <a href = "/auth/facebook"><div class = "login"></div></a>	
      <% end %>
 
-	<div class = "headlineholder">Walking Dead</div>
 
 </div>
