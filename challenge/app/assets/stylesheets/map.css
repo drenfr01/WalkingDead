@@ -1,0 +1,5 @@
+html { height: 100% }
+body { height: 100%; margin: 0px; padding: 0px }
+#mapDiv{height:800px; width:800px; position:absolute; background-color:blue;}
+#map_canvas { height: 100%; width: 100%; }
+#challengeDiv{height:800px; width:800px; position:absolute; background-color:blue;}

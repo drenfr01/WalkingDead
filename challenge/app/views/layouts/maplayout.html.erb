@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>	
+<body onload = "initialize()">
+
+<%= yield %>
+
+</body>
+</html>
