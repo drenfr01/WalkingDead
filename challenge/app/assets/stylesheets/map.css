@@ -1,6 +1,8 @@
 html { height: 100% }
 body { height: 100%; margin: 0px; padding: 0px }
-#mapDiv{height:800px; width:800px; float:left; }
-#accountinfo{height:400px; width:400px; float:left;}
-#accountinfo img{height:600px; width:600px; float:left;}
+#mapDiv{height:800px; width:700px; float:left; }
+#accountinfo{height:400px; width:200px; float:left;}
+#accountinfo img{height:600px; width:200px; float:left;}
 #map_canvas { height: 100%; width: 100%; }
+#challenges{height:800px; width:500px; float:left;}
+

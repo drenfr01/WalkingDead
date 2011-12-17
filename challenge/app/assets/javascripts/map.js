@@ -59,3 +59,29 @@ function setUserPosition(userLat, userLng)
 					infowindow.open(map, marker);
 				});
 }
+
+function placeChallengeMarkers(latitude, longitude)
+{
+	
+	console.log(latitude);
+	console.log(longitude);
+	console.log(map);
+	var marker;
+		
+		newMarkerLatLng = new google.maps.LatLng(latitude, longitude); 
+		marker = new google.maps.Marker({
+					position: newMarkerLatLng,
+				});
+
+				
+		marker.setMap(map);
+		
+		var infowindow = new google.maps.InfoWindow();
+		
+				// Open info window on click of marker, note the "this" to make sure each infowindow is mapped to appropriate marker
+		google.maps.event.addListener(marker, 'click', function() {
+					infowindow.close();
+					infowindow.setContent("Name: ");
+					infowindow.open(map, this);
+				});
+}

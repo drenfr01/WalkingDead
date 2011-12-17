@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  challenge_id: 1
+  title: MyString
+  description: MyText
+  latitude: 9.99
+  longitude: 9.99
+
+two:
+  challenge_id: 1
+  title: MyString
+  description: MyText
+  latitude: 9.99
+  longitude: 9.99

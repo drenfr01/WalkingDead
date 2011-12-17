@@ -1,6 +1,15 @@
 Challenge::Application.routes.draw do
   
+  get "location_challenges/new"
+
+  get "location_challenges/show"
+
+  get "location_challenges/edit"
+
+  get "location_challenges/delete"
+
   resources :authentications
+  resources :location_challenges
   match '/auth/:provider/callback' => 'authentications#create'
   devise_for :users
 
