@@ -18,14 +18,15 @@ class AuthenticationsController < ApplicationController
      		redirect_to "/mobile/loglocation/"
   	else 
 		user = User.new
-		user.authentications.build(:provider => omniauth['provider'],
-                :uid => omniauth['uid'])
+		user.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
 		if user.save
 			flash[:notice] = "Signed in successfully"
         		sign_in_and_redirect(:user, user)
 		else 
+		  user.email = omniauth['info']['email']
+		  user.save
 			session[:omniauth] = omniauth.except('extra')
-			redirect_to new_user_registration_url
+			sign_in_and_redirect!(:user, user)
 		end
 	end
   end
