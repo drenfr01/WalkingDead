@@ -12,6 +12,7 @@ class MobileController < ApplicationController
   def loglocation
     @title = "User Location"
     render :layout => 'layouts/maplayout.html.erb'
+    
   end
 
 end

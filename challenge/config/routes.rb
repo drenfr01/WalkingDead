@@ -19,6 +19,8 @@ Challenge::Application.routes.draw do
   resource :account, :controller => "users"
   resources :users
   
+  match '/users/show' => 'mobile#loglocation'
+  
   match '/mobile/loglocation' => "mobile#loglocation"
   # root :controller => "user_sessions", :action => "new"
   
