@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111220191707) do
+ActiveRecord::Schema.define(:version => 20111221213008) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -21,8 +21,15 @@ ActiveRecord::Schema.define(:version => 20111220191707) do
     t.datetime "updated_at"
   end
 
+  create_table "feats", :force => true do |t|
+    t.integer  "user_id"
+    t.boolean  "complete"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "location_challenge_id"
+  end
+
   create_table "location_challenges", :force => true do |t|
-    t.integer  "challenge_id"
     t.string   "title"
     t.text     "description"
     t.decimal  "latitude"
