@@ -35,8 +35,22 @@
 		
 		<div id = "accountinfo">
 			<div class = "headlineholder">Your info</div>
-			<div class = "subdescholder">Name: <%= current_user.first_name%> <%= current_user.last_name%><br />Age: 22<br />Member Since: December 2011 <br />Challenges Completed: 0</div>
-				<p> Should probably put user info here, i.e. what they've accomplished and such!</p>
+			<div class = "subdescholder">Name: <%= current_user.first_name%> <%= current_user.last_name%><br />Member Since: <%= current_user.created_at.to_formatted_s(:month_and_year) %> <br />Challenges Completed: <%= current_user.feats.size%></div>
+				<p>Recent Challenges</p>
+				
+				
+					<% current_user.feats.each do |f|%>
+					<p>
+						<span>Challenge: <%= f.location_challenge.title %></span>
+						<% if f.complete? %>
+						<span class = "completed">Completed: <%= time_ago_in_words(f.updated_at) + " ago"%></span>
+						<% else %>
+						<span class = "incomplete">Incomplete: <%= time_ago_in_words(f.updated_at) + " ago"%></span>
+						<% end %>
+					</p>
+					<% end%>
+					
+				
 		<div>
 	
 	</div>
