@@ -1,5 +1,8 @@
 Challenge::Application.routes.draw do
   
+  match '/api/get_user_challenges', :to => 'api#get_user_challenges', :conditions => {:method => :get}
+  match '/api/get_challenge_list', :to => 'api#get_challenge_list', :condition => {:method => :get}
+  
   get "location_challenges/new"
 
   get "location_challenges/show"
