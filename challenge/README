@@ -1,1 +1,28 @@
 Final project for COMP 120.
+
+--Functionality--
+
+WalkingDead is location based challenge game.  Users login to the site using their facebook account and are presented with a google map that lists walking challenges to nearby healthy locations.  In the current iteration of the app, Farmer's Markets are used.  
+
+Case Study:  John wants to get in shape, so John goes to the walking dead website.  He logs in using his Facebook profile, and his information is populated into the website from facebook, so he never has to worry about entering information or saving passwords.  Based on John's location, he is presented with a list of walking challenges to complete.  John picks a challenge that requires him to walk to his nearest farmers market.  When he completes the challenge, the app saves his data and gives him a score.  John can complete challenges to move up levels, and in doing so, get healthier!
+
+The app is currently local only (e.g. run rails s in the app root).
+
+--Heroku--
+
+500 Internal Server Error.  Logs show no sign of issue, even when running a trace.  DB migrations all go ok, but heroku console spits out the same 500 error.
+
+--API--
+
+Both XML and JSON to get user info and user challenges.  API works via HTTP GET, so the associated urls are:
+
+/api/get_user_challenges?id=#{user_id}
+#gets the challenges that the user has done and whether or not they have been completed
+
+/api/get_challenge_list
+#gives a list of all challenges
+
+Append _xml to the url to get XML instead of JSON
+
+
+

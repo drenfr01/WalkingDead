@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+#Landmark.delete_all
+ challenge_id = 1;
+ CSV.foreach("db/market_loc.csv") do |row|
+   LocationChallenge.create(:challenge_id => challenge_id, :title => row[1], :description => "Farmer's Market: Eat local, eat fresh!", :longitude => row[5], :latitude => row[6])
+   challenge_id = challenge_id + 1
+
+  end
